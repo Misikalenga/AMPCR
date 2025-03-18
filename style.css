@@ -27,6 +27,7 @@ body{
     background: rgb(121, 187, 248);
 }
 
+
 #anki{
     background: rgb(246, 248, 121);
 }
@@ -110,15 +111,35 @@ button:active {
     
 }
 
-#oui{
-    background: rgb(121, 248, 178);
 
-}
 
 #non{
     background: rgb(248, 121, 121);
 
 }
+
+
+#oui{
+    background: rgb(121, 248, 178);
+
+}
+
+#rep1{
+    background: rgb(248, 121, 121);
+}
+
+#rep2{
+    background: rgb(121, 187, 248);
+}
+
+#rep3{
+    background: rgb(121, 248, 178);
+}
+
+#rep4{
+    background: rgb(246, 248, 121);
+}
+
 
 input{
     width: 50px;
