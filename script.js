@@ -1,4 +1,31 @@
-//encodeage et affichage des notes 
+// Quiz
+
+let start = document.getElementById("start");
+let quizStart = document.getElementById("quizStart");
+let rep1 = document.getElementById("rep1");
+let rep2 = document.getElementById("rep2");
+let rep3 = document.getElementById("rep3");
+let rep4 = document.getElementById("rep4");
+
+let scoreQ = 0;
+let totalQ = 0;
+
+// bouton start
+
+quizStart.style.display = "none";
+
+start.addEventListener('click', function(){
+    if (quizStart.style.display == "none"){
+        quizStart.style.display = "block";
+    }else{
+        quizStart.style.display = "none";
+        scoreQ = 0;
+        totalQ = 0;
+    }
+})
+
+
+// CARTE
 let note = document.getElementById("notes");
 let rendu = document.getElementById("rendu");
 let reponse = document.getElementById("reponse");
@@ -7,11 +34,6 @@ let oui = document.getElementById("oui");
 let non = document.getElementById("non");
 oui.style.display = "none";
 non.style.display = "none";
-
-
-
-
-// ANKI
 
 let score = 0;
 let total = 0;
