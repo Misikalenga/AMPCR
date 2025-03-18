@@ -1,0 +1,171 @@
+body{
+    /* background: rgb(255, 255, 255); */
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("https://png.pngtree.com/background/20230527/original/pngtree-processor-microcontroller-computer-motherboard-picture-image_2770520.jpg") no-repeat center center;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 16px/28px "Source Sans Pro", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    transition: 0.2s;
+    padding: 10px;
+}
+
+.block{
+    display: none;
+    background: rgb(255, 255, 255);
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px 0;
+    box-shadow: 0px 0px 22px 0px rgba(145,145,145,0.58);
+    transition: 0.2s;
+}
+
+#quiz{
+    background: rgb(121, 187, 248);
+}
+
+#anki{
+    background: rgb(246, 248, 121);
+}
+
+
+.blocPlus{
+    
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 0px 0px 22px 0px rgba(145,145,145,0.58);
+    transition: 0.2s;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    margin: 30px;
+}
+
+.blocPlus:active{
+    box-shadow: 0px 0px 22px 0px rgba(145,145,145,0.58) inset;
+}
+
+.plus{
+    font-size: 60px;
+    color: rgb(100, 100, 100);
+    transition: 0.3s;
+   
+}
+
+.plus:hover{
+    rotate: 135deg;
+}
+
+.plus:active{
+    color: rgb(0, 0, 0);
+}
+
+.info{
+    display: flex;
+    
+    justify-content: space-between;
+    transition: 0.2s;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+.infodiv{
+    width: 15em;
+}
+
+button{
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid rgb(216, 216, 216);
+    transition: 0.2s;
+    box-shadow: 0px 0px 22px 0px rgba(240, 240, 240, 0.685);
+    font-weight: 700;
+
+}
+
+button:hover {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid rgb(32, 114, 238);
+    
+}
+
+button:active {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid rgb(32, 114, 238);
+    box-shadow: 0px 0px 22px 0px rgba(32,114,238,0.58);
+    
+}
+
+#oui{
+    background: rgb(121, 248, 178);
+
+}
+
+#non{
+    background: rgb(248, 121, 121);
+
+}
+
+input{
+    width: 50px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 2px solid rgb(32, 114, 238);
+    transition: 0.5s;
+
+}
+
+input:hover{
+    width: 50px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 2px solid rgb(32, 114, 238);
+    box-shadow: 0px 0px 22px 0px rgba(32,114,238,0.58);
+}
+
+input:focus{
+    width: 50px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 2px solid rgb(32, 114, 238);
+    box-shadow: 0px 0px 22px 0px rgba(32,114,238,0.58);
+    font-weight: 700;
+    color: rgb(66, 66, 66);
+}
+
+label{
+    margin-bottom: 20px;
+}
+
+#notes, #rendu, #reponse{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    transition: 1s;
+    padding: 0 10px;
+    box-shadow: 0px 0px 22px 0px rgba(240, 240, 240, 0.685);
+}
+
+#notes:hover, #rendu:hover, #reponse:hover{
+    /* border: 2px solid rgb(32, 114, 238); */
+    border-radius: 5px;
+    box-shadow: 0px 0px 22px 0px rgba(32, 114, 238, 0.288);
+}
+
+span{
+    font-weight: 700;
+    color: rgb(66, 66, 66);
+}
