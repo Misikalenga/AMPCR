@@ -3,7 +3,7 @@ body{
     background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("https://png.pngtree.com/background/20230527/original/pngtree-processor-microcontroller-computer-motherboard-picture-image_2770520.jpg") no-repeat center center;
     background-size: cover;
     color: rgb(0, 0, 0);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
