@@ -24,6 +24,30 @@ start.addEventListener('click', function(){
     }
 })
 
+// Quiz question
+
+let repQuiz = Object.entries(etude);
+let piegeQuiz1 = Object.entries(etude);
+let piegeQuiz2 = Object.entries(etude);
+let piegeQuiz3 = Object.entries(etude);
+let indexQ = 0;
+let indexQP1 = 0;
+let indexQP2 = 0;
+let indexQP3 = 0;
+
+
+function quizAsk(){
+
+    while (indexQ === indexQP1 || indexQ === indexQP2 || indexQ === indexQP3 || indexQP1 === indexQP2 || indexQP1 === indexQP3 || indexQP2 === indexQP3 ){
+        indexQ = Math.floor(Math.random() * repQuiz.length);
+        indexQP1 = Math.floor(Math.random() * repQuiz.length);
+        indexQP2 = Math.floor(Math.random() * repQuiz.length);
+        indexQP3 = Math.floor(Math.random() * repQuiz.length);
+    }
+    console.log(indexQ, indexQP1, indexQP2, indexQP3)
+}
+quizAsk()
+
 
 // CARTE
 let note = document.getElementById("notes");
