@@ -27,7 +27,7 @@ const etude = {
     "FTP": "File Transfer Protocol / Protocole permettant de transférer des fichiers entre un client et un serveur sur un réseau. / Transfert de fichiers sur un réseau (Hébergement web, partage de fichiers).",
     "Pare-feu matériel": "Un dispositif physique dédié à la sécurité du réseau. Il filtre le trafic AVANT qu’il n’atteigne les ordinateurs du réseau.(plus rapide)",
     "Pare-feu logiciel": "Une application installée sur un ordinateur ou un serveur qui surveille le trafic réseau et bloque les connexions suspectes.(peut ralentir l'ordinateur)",
-    "CPU": "Central Pressing Unit",
+    "CPU": "Central Processing Unit",
     "ALU": "Arithmetic Logic Unit",
     "CU": "Control Unit",
     "RAM": "Random Access Memory",
