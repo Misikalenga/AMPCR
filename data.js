@@ -132,7 +132,7 @@ const etudeHard = {
     "VGA": "Interface standard pour connecter des moniteurs analogiques.",
     "Northbridge": "composant responsable de la gestion des communications entre l'unité centrale de traitement (UC) et la mémoire",
     "Southbridge": "Responsable de la gestion de divers périphériques connectés à l'ordinateur",
-    "BSOD": "Bleu screen of death (ecran bleu quand le pc bug)",
+    "BSOD": "Ecran bleu quand le pc bug",
     "Chipset": "(Northbridge + Southbridge) Ensemble de composants électroniques dans un ordinateur qui gère le flux de données entre le processeur, la mémoire et les périphériques",
     "Spouleur d'impression": "Il organise et met en file d'attente les documents à imprimer (à redémarrer en cas de bug avec l'imprimante)",
     "Quel est le but de la defragmentation ?": "Augmenter les performances du HDD",

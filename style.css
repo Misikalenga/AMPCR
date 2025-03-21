@@ -43,7 +43,7 @@ p{
 }
 
 .p{
-    font-size: 30px;
+    font-size: 15px;
     display: flex;
 }
 
@@ -71,17 +71,16 @@ p{
     
     border: 2px solid white;
     border-radius: 20px;
-    padding: 20px;
+    padding: 5px;src: ;
     box-shadow: 0px 0px 22px 0px rgba(145,145,145,0.58);
     transition: 0.2s;
-    /* width: 10px;
-    height: 10px; */
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.3s;
-    margin: 10px;
+    margin: 0;
     transform: scale(0.93);
+    text-align: center;
 }
 
 .blocPlus:active{
@@ -89,7 +88,7 @@ p{
 }
 
 .plus{
-    font-size: 25px;
+    font-size: 15px;
     color: rgb(100, 100, 100);
     transition: 0.3s;
     scale: 90%;

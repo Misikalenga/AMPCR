@@ -467,6 +467,7 @@ rep4H.addEventListener('click', function(){
 
 // CARTE
 
+const color = ["rgb(248, 121, 121)","rgb(121, 248, 178)","rgb(246, 248, 121)","rgb(121, 187, 248)"]
 let carteBlock = document.getElementById("carteBlock");
 let carte = document.getElementById("carte");
 let rendu = document.getElementById("rendu");
@@ -484,6 +485,8 @@ let question = Object.entries(etudeCarte);
 let index = 0;
 
 function ankiAsk(){
+    carteColorIndex = Math.floor(Math.random()* color.length);
+    action.style.background= color[carteColorIndex];
     carteBlock.style.transition= "all 0.6s ease";
     carteBlock.style.opacity= "0";
     carteBlock.style.transform= "translateX(-150px)";
