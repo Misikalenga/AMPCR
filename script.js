@@ -467,6 +467,8 @@ rep4H.addEventListener('click', function(){
 
 // CARTE
 
+let carteBlock = document.getElementById("carteBlock");
+let carte = document.getElementById("carte");
 let rendu = document.getElementById("rendu");
 let reponse = document.getElementById("reponse");
 let action = document.getElementById("action");
@@ -482,6 +484,22 @@ let question = Object.entries(etudeCarte);
 let index = 0;
 
 function ankiAsk(){
+    carteBlock.style.transition= "all 0.6s ease";
+    carteBlock.style.opacity= "0";
+    carteBlock.style.transform= "translateX(-150px)";
+    setTimeout(function(){
+        carte.style.transform= "rotateY(0deg)";
+        carteBlock.style.transform= "translateX(0px)";
+        carteBlock.style.transform= "translateY(-350px)";
+    },500);
+    setTimeout(function(){
+        
+        carteBlock.style.transition= "all 0.8s ease";
+        carteBlock.style.transform= "translateY(0px)";
+        carteBlock.style.opacity= "1";
+
+    },1000);
+    
     oui.style.display = "none";
     non.style.display = "none";
 
@@ -489,10 +507,11 @@ function ankiAsk(){
 
     const [cle, valeur] = question[index];
     
-    rendu.innerHTML = '<p>' + cle + '</p>';
+    rendu.innerHTML = '<h2 style= "text-align: center; ">'  + cle + '</h2>';
     action.addEventListener('click', function(){
         reponse.style.display = "block";
-        reponse.innerHTML = '<p style= "text-align: center;"><b>' + cle + " </b><br/> " + valeur + '</p>'
+        reponse.innerHTML = '<p style= "text-align: center; "><b style= " background: rgb(121, 248, 178);">' + cle + " </b><br/> " + valeur + '</p>'
+        carte.style.transform= "rotateY(-180deg)";
         oui.style.display="block";
         non.style.display= "block";
         
