@@ -4,16 +4,22 @@ let quiz = document.getElementById("quiz");
 let anki = document.getElementById("anki");
 let bQuiz = document.getElementById("blockQuiz");
 let bAnki = document.getElementById("blockAnki");
+let notesQ = document.getElementById("notesQ");
+let note = document.getElementById("notes");
 
 
 quiz.addEventListener('click', function(){
     bQuiz.style.display = "block";
     bAnki.style.display = "none";
+    note.style.display = "none";
+    notesQ.style.display = "block";
 })
 
 anki.addEventListener('click', function(){
     bAnki.style.display = "block";
     bQuiz.style.display = "none";
+    notesQ.style.display = "none";
+    note.style.display = "block";
 })
 
 // Quiz
@@ -25,7 +31,7 @@ let rep1 = document.getElementById("rep1");
 let rep2 = document.getElementById("rep2");
 let rep3 = document.getElementById("rep3");
 let rep4 = document.getElementById("rep4");
-let notesQ = document.getElementById("notesQ");
+
 
 let scoreQ = 0;
 let totalQ = 0;
@@ -121,13 +127,13 @@ rep1.addEventListener('click', function(){
         rep1.innerHTML = "Bonne réponse";
         scoreQ += 1;
         totalQ += 1;
-        notesQ.innerHTML = "<p>" + scoreQ + "/" + totalQ + "</p>";
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
         bQuiz.style.background = "rgb(121, 248, 178)";
         setTimeout(quizAsk, 1000);
     }else{
         rep1.innerHTML = "Mauvaise réponse";
         totalQ += 1;
-        notesQ.innerHTML = "<p>" + scoreQ + "/" + totalQ + "</p>";
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
         setTimeout(quizAsk, 1000);
         bQuiz.style.background = "rgb(248, 121, 121)";
     }
@@ -138,13 +144,13 @@ rep2.addEventListener('click', function(){
         rep2.innerHTML = "Bonne réponse";
         scoreQ += 1;
         totalQ += 1;
-        notesQ.innerHTML = "<p>" + scoreQ + "/" + totalQ + "</p>";
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
         bQuiz.style.background = "rgb(121, 248, 178)";
         setTimeout(quizAsk, 1000);
     }else{
         rep2.innerHTML = "Mauvaise réponse";
         totalQ += 1;
-        notesQ.innerHTML = "<p>" + scoreQ + "/" + totalQ + "</p>";
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
         setTimeout(quizAsk, 1000);
         bQuiz.style.background = "rgb(248, 121, 121)";
     }
@@ -155,13 +161,13 @@ rep3.addEventListener('click', function(){
         rep3.innerHTML = "Bonne réponse";
         scoreQ += 1;
         totalQ += 1;
-        notesQ.innerHTML = "<p>" + scoreQ + "/" + totalQ + "</p>";
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
         bQuiz.style.background = "rgb(121, 248, 178)";
         setTimeout(quizAsk, 1000);
     }else{
         rep3.innerHTML = "Mauvaise réponse";
         totalQ += 1;
-        notesQ.innerHTML = "<p>" + scoreQ + "/" + totalQ + "</p>";
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
         setTimeout(quizAsk, 1000);
         bQuiz.style.background = "rgb(248, 121, 121)";
     }
@@ -172,13 +178,182 @@ rep4.addEventListener('click', function(){
         rep4.innerHTML = "Bonne réponse";
         scoreQ += 1;
         totalQ += 1;
-        notesQ.innerHTML = "<p>" + scoreQ + "/" + totalQ + "</p>";
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
         bQuiz.style.background = "rgb(121, 248, 178)";
         setTimeout(quizAsk, 1000);
     }else{
         rep4.innerHTML = "Mauvaise réponse";
         totalQ += 1;
-        notesQ.innerHTML = "<p>" + scoreQ + "/" + totalQ + "</p>";
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
+        setTimeout(quizAsk, 1000);
+        bQuiz.style.background = "rgb(248, 121, 121)";
+    }
+    
+})
+
+// Quiz Hard
+
+let startH = document.getElementById("startH");
+let askQuizH = document.getElementById("askQuizH");
+let quizStartH = document.getElementById("quizStartH");
+let rep1H = document.getElementById("rep1H");
+let rep2H = document.getElementById("rep2H");
+let rep3H = document.getElementById("rep3H");
+let rep4H = document.getElementById("rep4H");
+
+
+let scoreQ = 0;
+let totalQ = 0;
+
+// bouton start
+
+quizStart.style.display = "none";
+
+start.addEventListener('click', function(){
+    if (quizStart.style.display == "none"){
+        quizStart.style.display = "block";
+    }else{
+        quizStart.style.display = "none";
+        scoreQ = 0;
+        totalQ = 0;
+    }
+})
+
+// Quiz question
+
+
+let repQuizH = Object.entries(etude);
+let piegeQuiz1H = Object.entries(etude);
+let piegeQuiz2H = Object.entries(etude);
+let piegeQuiz3H = Object.entries(etude);
+let indexQH = 0;
+let indexQP1H = 0;
+let indexQP2H = 0;
+let indexQP3H = 0;
+
+let [cleRep, valeurRep] = repQuiz[indexQ];
+let [clePi1, valeurPi1] = repQuiz[indexQP1];
+let [clePi2, valeurPi2] = repQuiz[indexQP2];
+let [clePi3, valeurPi3] = repQuiz[indexQP3];
+
+let repList= [];
+
+let aH = 0;
+let bH = 0;
+let cH = 0;
+let dH = 0;
+
+function quizAsk(){
+    
+    bQuiz.style.background = "rgb(255, 255, 255)";
+
+    indexQ = 0;
+    indexQP1 = 0;
+    indexQP2 = 0;
+    indexQP3 = 0;
+
+    a = 0;
+    b = 0;
+    c = 0;
+    d = 0;
+
+
+
+    while (indexQ === indexQP1 || indexQ === indexQP2 || indexQ === indexQP3 || indexQP1 === indexQP2 || indexQP1 === indexQP3 || indexQP2 === indexQP3 ){
+        indexQ = Math.floor(Math.random() * repQuiz.length);
+        indexQP1 = Math.floor(Math.random() * repQuiz.length);
+        indexQP2 = Math.floor(Math.random() * repQuiz.length);
+        indexQP3 = Math.floor(Math.random() * repQuiz.length);
+    }
+    
+    [cleRep, valeurRep] = repQuiz[indexQ];
+    [clePi1, valeurPi1] = repQuiz[indexQP1];
+    [clePi2, valeurPi2] = repQuiz[indexQP2];
+    [clePi3, valeurPi3] = repQuiz[indexQP3];
+
+    askQuiz.innerHTML = '<p>' + cleRep + '</p>';
+
+    repList = [valeurRep, valeurPi1, valeurPi2, valeurPi3];
+
+    while (a === b || a === c || a === d || b === c || b === d || c === d ){
+    a = Math.floor(Math.random() * repList.length);
+    b = Math.floor(Math.random() * repList.length);
+    c = Math.floor(Math.random() * repList.length);
+    d = Math.floor(Math.random() * repList.length);
+    }
+
+    rep1.innerHTML = repList[a];
+    rep2.innerHTML = repList[b];
+    rep3.innerHTML = repList[c];
+    rep4.innerHTML = repList[d];
+
+}
+quizAsk();
+
+
+rep1.addEventListener('click', function(){
+    if (repList[a]=== valeurRep){
+        rep1.innerHTML = "Bonne réponse";
+        scoreQ += 1;
+        totalQ += 1;
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
+        bQuiz.style.background = "rgb(121, 248, 178)";
+        setTimeout(quizAsk, 1000);
+    }else{
+        rep1.innerHTML = "Mauvaise réponse";
+        totalQ += 1;
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
+        setTimeout(quizAsk, 1000);
+        bQuiz.style.background = "rgb(248, 121, 121)";
+    }
+    
+})
+rep2.addEventListener('click', function(){
+    if (repList[b] === valeurRep){
+        rep2.innerHTML = "Bonne réponse";
+        scoreQ += 1;
+        totalQ += 1;
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
+        bQuiz.style.background = "rgb(121, 248, 178)";
+        setTimeout(quizAsk, 1000);
+    }else{
+        rep2.innerHTML = "Mauvaise réponse";
+        totalQ += 1;
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
+        setTimeout(quizAsk, 1000);
+        bQuiz.style.background = "rgb(248, 121, 121)";
+    }
+    
+})
+rep3.addEventListener('click', function(){
+    if (repList[c] === valeurRep){
+        rep3.innerHTML = "Bonne réponse";
+        scoreQ += 1;
+        totalQ += 1;
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
+        bQuiz.style.background = "rgb(121, 248, 178)";
+        setTimeout(quizAsk, 1000);
+    }else{
+        rep3.innerHTML = "Mauvaise réponse";
+        totalQ += 1;
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
+        setTimeout(quizAsk, 1000);
+        bQuiz.style.background = "rgb(248, 121, 121)";
+    }
+    
+})
+rep4.addEventListener('click', function(){
+    if (repList[d] === valeurRep){
+        rep4.innerHTML = "Bonne réponse";
+        scoreQ += 1;
+        totalQ += 1;
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
+        bQuiz.style.background = "rgb(121, 248, 178)";
+        setTimeout(quizAsk, 1000);
+    }else{
+        rep4.innerHTML = "Mauvaise réponse";
+        totalQ += 1;
+        notesQ.innerHTML = "<i>" + scoreQ + "/" + totalQ + "</i>";
         setTimeout(quizAsk, 1000);
         bQuiz.style.background = "rgb(248, 121, 121)";
     }
@@ -187,7 +362,7 @@ rep4.addEventListener('click', function(){
 
 
 // CARTE
-let note = document.getElementById("notes");
+
 let rendu = document.getElementById("rendu");
 let reponse = document.getElementById("reponse");
 let action = document.getElementById("action");
@@ -222,7 +397,7 @@ function ankiAsk(){
 
 non.addEventListener('click', function(){
     total += 1;
-    note.innerHTML= '<p>' + score + '/' + total + '</p>';
+    note.innerHTML= '<i>' + score + '/' + total + '</i>';
     reponse.style.display = "none";
     ankiAsk();
 })
@@ -231,7 +406,7 @@ non.addEventListener('click', function(){
 oui.addEventListener('click', function(){
     score += 1;
     total += 1;
-    note.innerHTML= '<p>' + score + '/' + total + '</p>';
+    note.innerHTML= '<i>' + score + '/' + total + '</i>';
     reponse.style.display = "none";
     ankiAsk();
 })

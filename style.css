@@ -1,32 +1,52 @@
-body{
+.body{
     /* background: rgb(255, 255, 255); */
     background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("https://png.pngtree.com/background/20230527/original/pngtree-processor-microcontroller-computer-motherboard-picture-image_2770520.jpg") no-repeat center center;
     background-size: cover;
     color: rgb(0, 0, 0);
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     font: 16px/28px "Source Sans Pro", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
     transition: 0.2s;
     padding: 10px;
+    border-radius: 20px;
 }
 
 .block{
     display: none;
     background: rgb(255, 255, 255);
     border: 2px solid white;
+    width: 80%;
     border-radius: 20px;
     padding: 20px;
-    margin: 30px 0;
+    /* margin: 30px 0; */
     box-shadow: 0px 0px 22px 0px rgba(145,145,145,0.58);
     transition: 0.2s;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p{
+    font-size: 30px;
+    display: flex;
+}
+
+.div{
+    display: contents;
 }
 
 #quiz{
     background: rgb(121, 187, 248);
 }
 
+#quizH{
+    background: rgb(248, 121, 121);
+}
 
 #anki{
     background: rgb(246, 248, 121);
@@ -46,7 +66,7 @@ body{
     justify-content: center;
     align-items: center;
     transition: 0.3s;
-    margin: 30px;
+    margin: 10px;
 }
 
 .blocPlus:active{
@@ -71,7 +91,7 @@ body{
 .info{
     display: flex;
     
-    justify-content: space-between;
+    justify-content: center;
     transition: 0.2s;
 }
 
@@ -168,9 +188,6 @@ input:focus{
     color: rgb(66, 66, 66);
 }
 
-label{
-    margin-bottom: 20px;
-}
 
 #notes, #rendu, #reponse{
     border: 2px solid rgb(255, 255, 255);

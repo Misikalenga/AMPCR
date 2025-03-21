@@ -9,103 +9,147 @@
 <body>
 
 <!-- bouton -->
-    <div>
+    <div class="nav">
         <div class="blocPlus" id="quiz">
             <div class="plus">+</div>
         </div>
-        <div id="iframe"></div>
+
+        <div class="blocPlus" id="quizH">
+            <div class="plus">+</div>
+        </div>
+
     
         <div class="blocPlus" id="anki">
             <div class="plus">+</div>
         </div>
-        <div id="iframe"></div>
+
+        <p class="p">score :   <span id="notes"></span><span id="notesQ"></span></p>
+        
+        
+
     </div>
     
+    <div class="body">
 
+        <div class="div">
+        <!-- QUIZ -->
+            <div class="block" id="blockQuiz">
+                <h1>Quiz AMPCR</h1>
+                <button id="start">Commencer le quiz</button>
 
-    <div>
-    <!-- QUIZ -->
-        <div class="block" id="blockQuiz">
-            <h1>Quiz AMPCR</h1>
-            <button id="start">Commencer le quiz</button>
-            
-            <div class="info" id="quizStart">
-                
-                <h3 for="note">Quel est la definition de :</h3>
+                <div class="info" id="quizStart">
 
-                <div class="infodiv">
-                    <div id="askQuiz">
-                    </div>
-                </div>
+                    <h3 for="note">Quel est la definition de :</h3>
 
-                <h3 for="note">Fait un choix</h3>
-                
-                <div>
-                    <div class="info">
-                        <button id="rep1">a</button>
-                        <button id="rep2">b</button>
-                    </div>
-                    <div class="info">
-                        <button id="rep3">c</button>
-                        <button id="rep4">d</button>
-                    </div>
-                </div>
-    
-                    
-    
-                <div class="info">
                     <div class="infodiv">
-                        <h2>score</h2>
-                        <div id="notesQ">
+                        <div id="askQuiz">
+                        </div>
+                    </div>
+
+                    <h3>Fait un choix</h3>
+
+                    <div>
+                        <div class="info">
+                            <button id="rep1">a</button>
+                            <button id="rep2">b</button>
+                        </div>
+                        <div class="info">
+                            <button id="rep3">c</button>
+                            <button id="rep4">d</button>
+                        </div>
+                    </div>
+                
+
+                
+                    <div class="info">
+
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- QUIZ Hard -->
+            <div class="block" id="blockQuizH">
+                <h1>Quiz AMPCR</h1>
+                <button id="startH">Commencer le quiz</button>
+
+                <div class="info" id="quizStartH">
+
+                    <h3 for="note">Quel est la definition de :</h3>
+
+                    <div class="infodiH">
+                        <div id="askQuizH">
+                        </div>
+                    </div>
+
+                    <h3>Fait un choix</h3>
+
+                    <div>
+                        <div class="info">
+                            <button id="rep1H">a</button>
+                            <button id="rep2H">b</button>
+                        </div>
+                        <div class="info">
+                            <button id="rep3H">c</button>
+                            <button id="rep4H">d</button>
+                        </div>
+                    </div>
+                
+
+                
+                    <div class="info">
+
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+        <!-- ANKI -->
+            <div class="block" id="blockAnki">
+                <h1>Carte AMPCR</h1>
+                <h3 for="note">Devine la réponse</h3>
+                <div class="info">
+
+                    <div class="infodiv">
+                        <div id="rendu">
                         </div>
                     </div>
                 </div>
-                
+                <div class="info">
+                    <button id="action">voir la réponse</button>
+                </div>
+
+                <div class="info">
+                    <div class="infodiv">
+                        <div id="reponse">
+                        </div>
+                    </div>
+
+                </div>  
+
+                <div class="info">
+                        <button id="oui">Je connais</button>
+                        <button id="non">je connais pas</button>
+                </div>
+
+                <div class="info">
+                    <div class="infodiv">
+                        
+                    </div>
+                </div>
+
             </div>
 
         </div>
-
-
-    <!-- ANKI -->
-        <div class="block" id="blockAnki">
-            <h1>Carte AMPCR</h1>
-            <h3 for="note">Devine la réponse</h3>
-            <div class="info">
-
-                <div class="infodiv">
-                    <div id="rendu">
-                    </div>
-                </div>
-            </div>
-            <div class="info">
-                <button id="action">voir la réponse</button>
-            </div>
-
-            <div class="info">
-                <div class="infodiv">
-                    <div id="reponse">
-                    </div>
-                </div>
-                
-            </div>  
-            
-            <div class="info">
-                    <button id="oui">Je connais</button>
-                    <button id="non">je connais pas</button>
-            </div>
-            
-            <div class="info">
-                <div class="infodiv">
-                    <h2>score</h2>
-                    <div id="notes">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
+    
     </div>
-
+    
     <script src="data.js"></script>
     <script src="script.js"></script>
     
