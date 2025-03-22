@@ -233,6 +233,42 @@ let revision = document.getElementById("revisions");
 let scoreQH = 0;
 let totalQH = 0;
 
+// option
+
+let inverserH = document.getElementById("inverserH");
+let inverserOnH = document.getElementById("inverserOnH");
+let inverserActiveH = false;
+
+inverserH.addEventListener('click', function() {
+    if (inverserActiveH == false){
+        inverserActiveH = true;
+        inverserOnH.style.transform = "translateX(24px)";
+        inverserOnH.style.background = "rgb(121, 248, 178)";
+    }else{
+        inverserActiveH = false;
+        inverserOnH.style.transform = "translateX(0px)";
+        inverserOnH.style.background = "rgb(121, 187, 248)";
+    }
+})
+
+let erreurH = document.getElementById("erreurH");
+let erreurOnH = document.getElementById("erreurOnH");
+let erreurActiveH = false;
+
+erreurH.addEventListener('click', function() {
+    if (erreurActiveH == false){
+        erreurActiveH = true;
+        erreurOnH.style.transform = "translateX(24px)";
+        erreurOnH.style.background = "rgb(121, 248, 178)";
+    }else{
+        erreurActiveH = false;
+        erreurOnH.style.transform = "translateX(0px)";
+        erreurOnH.style.background = "rgb(121, 187, 248)";
+    }
+})
+
+
+
 // bouton start H
 
 let dataE = etudeHard;
