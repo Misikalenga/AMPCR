@@ -37,6 +37,31 @@ body{
     align-items: center;
 }
 
+.choix{
+    background: rgb(240, 240, 240);
+    border-radius: 20px;
+    width: 50px;
+    box-shadow: 0px 0px 22px 0px rgba(145,145,145,0.58) inset;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: 0.8s;
+    margin: 0 10px;
+}
+
+.on{
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    border-radius: 50%;
+    background: rgb(121, 187, 248);
+    border: 1px solid white;
+    box-shadow: 0px 0px 22px 0px rgba(145,145,145,0.58);
+
+    transition: 0.3s;
+}
+
 p{
     border-radius: 10px;
     padding: 0 10px;
@@ -107,7 +132,7 @@ p{
 
 .info{
     display: flex;
-    
+    align-items: center;
     justify-content: center;
     transition: 0.2s;
 }
