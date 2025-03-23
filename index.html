@@ -11,7 +11,7 @@
 <!-- bouton -->
     <div class="nav">
         <div class="blocPlus" id="quiz">
-            <div class="plus">Quiz facile</div>
+            <div class="plus">Quiz examen</div>
         </div>
 
         <div class="blocPlus" id="quizH">
@@ -33,33 +33,39 @@
 
         <div class="div">
         <!-- QUIZ -->
-            <div class="block" id="blockQuiz">
-                <h1>Quiz AMPCR</h1>
+        <div class="block" id="blockQuiz">
+            <h1>Quiz Question d'examen AMPCR</h1>
+            <div class="nav">
                 <button id="start">Commencer le quiz</button>
+                <div class="info"><h5>inverser</h5><div class="choix" id="inverser"><div class="on" id="inverserOn"></div></div></div>
+                <div class="info"><h5>afficher la bonne reponse</h5><div class="choix" id="erreur"><div class="on" id="erreurOn"></div></div></div>
+            </div>
 
-                <div class="info" id="quizStart">
+            <div class="info" id="quizStart">
 
-                    <h3 for="note">Quel est la definition de :</h3>
+                <h3 for="note">Quel est la definition de :</h3>
 
-                    <div class="infodiv">
-                        <div id="askQuiz">
-                        </div>
+                <div class="infodi">
+                    <div id="askQuiz">
                     </div>
+                </div>
 
-                    <h3>Fait un choix</h3>
+                <h3>Fait un choix</h3>
 
-                    <div>
-                        <div class="info">
-                            <button id="rep1">a</button>
-                            <button id="rep2">b</button>
-                        </div>
-                        <div class="info">
-                            <button id="rep3">c</button>
-                            <button id="rep4">d</button>
-                        </div>
+                <div>
+                    <div class="info">
+                        <button id="rep1">a</button>
+                        <button id="rep2">b</button>
                     </div>
-
-
+                    <div class="info">
+                        <button id="rep3">c</button>
+                        <button id="rep4">d</button>
+                    </div>
+                </div>
+            
+                <h3 id="revisionsTitre">Réponses trouvées</h3>
+            
+                <div  id="revisions"> </div>
                 </div>
 
             </div>
@@ -95,9 +101,9 @@
                         </div>
                     </div>
                 
-                    <h3>Réponses trouvées</h3>
+                    <h3 id="revisionsTitreH">Réponses trouvées</h3>
                 
-                    <div  id="revisions"> </div>
+                    <div  id="revisionsH"> </div>
                     </div>
 
                 </div>
