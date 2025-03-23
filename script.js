@@ -106,7 +106,7 @@ erreur.addEventListener('click', function() {
 
 // bouton start 
 
-let dataE = etude;
+let dataE = exam;
 
 quizStart.style.display = "none";
 let repQuiz = Object.entries(dataE);
