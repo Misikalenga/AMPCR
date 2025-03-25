@@ -706,7 +706,8 @@ let oui = document.getElementById("oui");
 let non = document.getElementById("non");
 oui.style.display = "none";
 non.style.display = "none";
-
+let revisionC = document.getElementById("revisionC");
+let revisionCNote = "";
 let score = 0;
 let total = 0;
 
@@ -738,6 +739,9 @@ function ankiAsk(){
     index = Math.floor(Math.random() * question.length);
 
     const [cle, valeur] = question[index];
+    const [cleC, valeurC] = repQuizH[index];
+    
+    
     
     rendu.innerHTML = '<h2 style= "text-align: center; ">'  + cle + '</h2>';
     action.addEventListener('click', function(){
@@ -746,7 +750,7 @@ function ankiAsk(){
         carte.style.transform= "rotateY(-180deg)";
         oui.style.display="block";
         non.style.display= "block";
-        
+        revisionCNote = cle + '</b> = " ' + valeur + ' " ' + valeurC;
     })
 }
 
@@ -754,6 +758,7 @@ non.addEventListener('click', function(){
     total += 1;
     note.innerHTML= '<i>' + score + '/' + total + '</i>';
     reponse.style.display = "none";
+    revisionC.innerHTML += '<p style = "background:' + color[carteColorIndex] + '"><b>' + revisionCNote + "<br/></p>";
     ankiAsk();
 })
 
@@ -763,6 +768,7 @@ oui.addEventListener('click', function(){
     total += 1;
     note.innerHTML= '<i>' + score + '/' + total + '</i>';
     reponse.style.display = "none";
+    revisionC.innerHTML += '<p style = "background:' + color[carteColorIndex] + '"><b>' + revisionCNote + "<br/></p>";
     ankiAsk();
 })
 
