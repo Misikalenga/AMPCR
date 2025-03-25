@@ -423,7 +423,7 @@ const exam = {
     "Quel composant stocke temporairement les données utilisées par le processeur ?": "La mémoire RAM (Random Access Memory)",
     "Quel composant est considéré comme le cerveau de l'ordinateur ?": "Le processeur (CPU)",
     "Donnez un exemple de circuit intégré (CHIP) présent dans un ordinateur.": "Northbridge",
-    "Donnez un exemple de circuit imprimé (PCB) présent dans un ordinateur.": "Bus SATA",
+    "Donnez un exemple de circuit imprimé (PCB) présent dans un ordinateur.": "Bus la carte mère, la carte graphique, la carte reseau",
     "Quel est le micrologiciel le plus récent utilisé sur les cartes mères ?": "UEFI (Unified Extensible Firmware Interface)",
     "À quoi sert la pâte thermique ?": "Elle comble les micro-imperfections entre le processeur et le dissipateur thermique pour améliorer la dissipation de chaleur.",
     "Qu'est-ce que le Secure Boot ?": "C'est un système de sécurité UEFI qui empêche le démarrage d’un système d’exploitation non signé ou non autorisé.",
